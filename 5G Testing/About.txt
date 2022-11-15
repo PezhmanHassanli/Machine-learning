@@ -1,1 +1,21 @@
-This project is about
+End-user throughput [MB/s] is one of the most important aspects that affects mobile radio networks performance and network quality perception from the user viewpoint. In this project a database made of selected Key Performance Indicators (KPIs) and KPI-derived data, is exploited following different approaches in order to perform End-User Throughput regression. The throughput itself is a KPI so we own a labelled dataset.
+
+The dataset is comprehensive of the aggregate data coming from the basestations of 3 different anonymous cities. Each row refers to a measurement time window of 15 minutes
+
+Features description:
+
+PRB_usage_DL: % of used Physical Resource Blocks for Downlink. Basically an active user in the network is given a certain amount of PRBs, each of 180 KHz bandwidth, every scheduling interval [1ms]. These PRBs achieve orthogonality through a tecnique known as OFDM, or in time domain, and so they allow different user to communicate simultaneously inside of the network. There is a linear dependency between Capacity and bandwidth: C=B*log2(1+SNR), and capacity can be seen as a theoretical upper bound for achievable throughput. Every basestation owns a certain amount of PRBs depending on how many frequency layers are used.
+
+Volume_DL: Total amount of data exchanged in Downlink, expressed in MB
+
+Avg_act_UE_DL: Avg number of users in active state during a scheduling interval [1ms] in Downlink
+
+CQI: Channel Quality Indicator. A measurement comprehensive of channel interference, signal-to-noise ratio, etc...
+
+RSSI_for_PUSCH: Average Received Signal Strength Indicator [dBm] measured by the basestation for the Physical Uplink Shared Channel
+
+SINR_for_PUSCH: Average Signal-to-noise and interference ratio [dB] measured by the basestation for the Physical Uplink Shared Channel
+
+MCS DL: Average Modulation-and-coding scheme for Downlink. An index indicating which numerical modulation and coding rate should be used. Higher order modulations provide a higher spectrum efficiency and therefore higher achievable throughput. LTE MCS mapping: https://www.sharetechnote.com/html/Handbook_LTE_MCS_ModulationOrder.html
+
+Throughput_DL: End-user Throughput in Downlink
