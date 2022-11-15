@@ -1,2 +1,2 @@
-# Machine-learning
-Big Data KPI project
+# Deep Learning
+End-user throughput regression from KPI's dataset with Neural Networks
